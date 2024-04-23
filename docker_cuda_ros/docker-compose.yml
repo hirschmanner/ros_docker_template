@@ -1,4 +1,3 @@
-version: '2.4'
 services:
   master:
     image: ros1_cuda
@@ -8,7 +7,7 @@ services:
     network_mode: "host"
     runtime: "nvidia"
     volumes:
-      - "./projects:/catkin_ws/src/projects:rw"
+      - "../projects:/catkin_ws/src/projects:rw"
       - /dev/bus/usb:/dev/bus/usb
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
       - /etc/localtime:/etc/localtime:ro
